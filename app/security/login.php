@@ -45,7 +45,8 @@ $messages = array();
 getParamsLogin($form);
 
 if(!validateLogin($form, $messages)){
-	include _ROOT_PATH.'/app/security/login_view.php';
+	include $conf->root_path.'/app/security/login_view.php';
+	// include $conf->root_path.'/app/security/login_view2.tpl';
 } else{ 
-	header("Location: "._APP_URL);
+	header("Location: ".$conf->app_url);
 }

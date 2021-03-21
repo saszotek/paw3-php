@@ -16,12 +16,12 @@
     <!-- CSS Libraries -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="{$app_url}/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="{$app_url}/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="{$app_url}/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="{$conf->app_url}/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="{$conf->app_url}/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="{$conf->app_url}/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="{$app_url}/css/style.css" rel="stylesheet">
+    <link href="{$conf->app_url}/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
         <div class="container-fluid">
             <div class="navbar-brand">
                 {$page_title|default:"Tytuł domyślny"}
-                <a href="{$app_root}/app/security/logout.php" id="wyloguj_moje">Wyloguj</a>
+                <a href="{$conf->app_root}/app/security/logout.php" id="wyloguj_moje">Wyloguj</a>
             </div>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>

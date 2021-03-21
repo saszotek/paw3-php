@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-16 12:15:48
-  from 'C:\xampp\htdocs\test\php01\app\calc.tpl' */
+/* Smarty version 3.1.39, created on 2021-03-21 17:16:27
+  from 'C:\xampp\htdocs\test\php01\app\calc\calc.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60509364729966_11971736',
+  'unifunc' => 'content_6057715b7a58e4_26813857',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'df6b61dbcc87dded422bc3d7b952ebe17004b1e5' => 
+    '499ded0fab9106cb357c47088296759b5e0690bb' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\test\\php01\\app\\calc.tpl',
-      1 => 1615893346,
+      0 => 'C:\\xampp\\htdocs\\test\\php01\\app\\calc\\calc.tpl',
+      1 => 1616343051,
       2 => 'file',
     ),
   ),
@@ -20,36 +20,36 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60509364729966_11971736 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6057715b7a58e4_26813857 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_105565021660509364717c42_33628574', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11039684626057715b795cd4_99957475', 'content');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_918948166050936471cd67_43518758', 'messages');
-$_smarty_tpl->inheritance->endChild($_smarty_tpl, "../template/main.tpl");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11127544016057715b799a99_90004726', 'messages');
+$_smarty_tpl->inheritance->endChild($_smarty_tpl, ($_smarty_tpl->tpl_vars['conf']->value->root_path).("/template/main.tpl"));
 }
 /* {block 'content'} */
-class Block_105565021660509364717c42_33628574 extends Smarty_Internal_Block
+class Block_11039684626057715b795cd4_99957475 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_105565021660509364717c42_33628574',
+    0 => 'Block_11039684626057715b795cd4_99957475',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 
-<form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
-/app/calc.php" method="post">
+<form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+calcCompute" method="post">
     <div class="control-group">
         <input type="text" class="form-control" id="id_x" name="x" placeholder="Kwota" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->x;?>
 " />
@@ -75,12 +75,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'content'} */
 /* {block 'messages'} */
-class Block_918948166050936471cd67_43518758 extends Smarty_Internal_Block
+class Block_11127544016057715b799a99_90004726 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'messages' => 
   array (
-    0 => 'Block_918948166050936471cd67_43518758',
+    0 => 'Block_11127544016057715b799a99_90004726',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
