@@ -1,4 +1,4 @@
-{extends file=$conf->root_path|cat:"/template/main.tpl"}
+{extends file="main.tpl"}
 
 {block name=content}
 
