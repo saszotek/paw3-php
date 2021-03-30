@@ -35,9 +35,7 @@ class CalcCtrl{
         return !(getMessages()->isError());
     }
 
-    public function process(){
-        global $role;
-
+    public function action_calcCompute(){
         $this->getParams();
 
         if($this->validate()){
@@ -50,14 +48,6 @@ class CalcCtrl{
             $this->form->y *= 12;
             $this->form->z *= 0.01;
 
-            // if($role == 'admin'){
-            //     $result = (($x * $z) + $x) / $y;
-            // }
-        
-            // if($role == 'user'){
-            //     $result = (($x * $z) + $x) / $y;
-            // }
-
             $this->result->result = (($this->form->x * $this->form->z) + $this->form->x) / $this->form->y;
 
             getMessages()->addInfo('Wykonano obliczenia');
@@ -66,7 +56,13 @@ class CalcCtrl{
         $this->generateView();
     }
 
+    public function action_calcShow(){
+        getMessages()->addInfo('Witaj w kalkulatorze');
+		$this->generateView();
+    }
+
     public function generateView(){
+        getSmarty()->assign('user',unserialize($_SESSION['user']));
         getSmarty()->assign('page_title', 'Kalkulator kredytowy');
         getSmarty()->assign('page_header', 'Razem wyliczymy każdą ratę');
         getSmarty()->assign('form_header', 'Kalkulator kredytowy, czyli problem z głowy');
